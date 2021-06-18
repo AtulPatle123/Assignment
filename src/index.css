@@ -1,13 +1,75 @@
-body {
+/* ============
+Global styling
+=============== 
+*/
+
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* 
+=============
+Variables
+=============
+ */
+
+:root {
+  /* primary color */
+  --clr-white: #fff;
+  --clr-grey: #797575;
+  --clr-light-blue: #27cdff;
+  --clr-red: #f00e0e;
+  --clr-dark: #222;
+
+  /* shadow */
+  --light-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  --dark-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+
+  /* linear gradient */
+  --light-blue-gradient: linear-gradient(
+    90deg,
+    rgb(39, 176, 255) 0%,
+    rgb(0, 232, 236) 100%
+  );
+  --dark-blue-gradient: linear-gradient(
+    90deg,
+    rgb(39, 143, 255) 0%,
+    rgb(12, 99, 250) 100%
+  );
+
+  --dark-gradient: linear-gradient(
+    90deg,
+    rgb(40, 40, 40) 0%,
+    rgb(17, 17, 17) 100%
+  );
+}
+
+/* 
+=============
+base style 
+=============
+*/
+
+h1,
+p {
+  text-transform: capitalize;
+  letter-spacing: 0.6px;
+  margin: 2px;
+}
+
+/* main / root / base container of the website */
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
